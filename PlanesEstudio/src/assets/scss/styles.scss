@@ -1,0 +1,24 @@
+@mixin width-height($w,$h) {
+  width: $w;
+  height: $h;
+}
+
+html,body{
+ @include width-height(100%, 100%);
+}
+body{
+    padding-top: 80px;
+}
+.header{
+    height: 80px;
+    .header__bar{
+        margin-top:20px; 
+        height: 40px;
+    }
+}
+.content{
+    height: 100%;
+    section{
+        height: 100%;
+    }
+}

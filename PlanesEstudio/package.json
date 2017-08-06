@@ -1,0 +1,27 @@
+{
+  "name": "planesdeestudio",
+  "version": "1.0.0",
+  "description": "Planes de estudio del itam",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "uboat46",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.7.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-jshint": "^2.0.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "jshint": "^2.9.5"
+  },
+  "dependencies": {
+    "angular-auth0": "^2.0.0",
+    "auth0-js": "^8.8.0"
+  }
+}
