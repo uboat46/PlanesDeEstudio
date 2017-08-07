@@ -21,4 +21,7 @@ body{
     section{
         height: 100%;
     }
+    iframe{
+        @include width-height(100%, 100%);
+    }
 }

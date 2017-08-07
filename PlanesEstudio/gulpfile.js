@@ -73,6 +73,16 @@ gulp.task('components', function() {
         .pipe(gulp.dest('dist/components'));
 });
 
+// Concatenate & Minify Service scripts
+gulp.task('services', function() {
+    return gulp.src('src/app/services/*.js')
+        .pipe(concat('services.js'))
+        .pipe(gulp.dest('dist'))
+        .pipe(rename('services.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('dist/services'));
+});
+
 // Minify index html files
 gulp.task('minify', function() {
   return gulp.src('src/index.html')
@@ -96,10 +106,14 @@ gulp.task('watch', function() {
     gulp.watch('src/app/*.js', ['app']);
     gulp.watch('src/app/components/**/*.html', ['views']);
     gulp.watch('src/app/components/**/*.js', ['components']);
+    gulp.watch('src/app/services/*.js', ['services']);
 });
 
 // Default Task
-gulp.task('default', ['libs','lint', 'sass', 'scripts','app','views','components','minify','watch']);
+gulp.task('default', ['libs','lint', 'sass', 'scripts','app','views','services','components','minify','watch']);
 
 // Run Server Task
 gulp.task('build', ['connect']);
+
+
+//npm rebuild node-sass --force
